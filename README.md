@@ -7,7 +7,6 @@ This project implements a machine learning pipeline to predict taxi trip duratio
 - Explore dataset structure with `df.info()` and `df.describe()`
 - Note dataset size (rows, columns)
 - Identify target variable: `trip_duration`
-- Check for missing values or placeholder strings
 
 ### 2. Data Cleaning
 - Remove or impute missing values
