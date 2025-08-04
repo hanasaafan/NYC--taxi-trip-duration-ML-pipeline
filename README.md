@@ -21,13 +21,24 @@ This project implements a machine learning pipeline to predict taxi trip duratio
 - Calculate distance in km using Haversine formula on pickup and dropoff coordinates
 - Drop redundant or low-correlation features (`vendor_id`, `passenger_count`, `store_and_fwd_flag`, raw coordinates, `pickup_month`)
 
-### 4. Train-Validation-Test Split
+###  4. Data Visualization
+Perform exploratory data analysis using Seaborn with multiple plot types:
+
+- Histogram and KDE plots to study distribution of trip durations and other numerical variables
+
+- Boxplots and Violin plots to compare trip duration across categorical features such as pickup hour, day of week, weekend indicator, etc.
+
+- Scatter plots to analyze relationships between continuous variables like distance and trip duration
+
+- Bar plots and Line plots to visualize average trip durations across different time and categorical groups
+
+### 5. Train-Validation-Test Split
 - Split data into training and validation sets (e.g., 80/20)
 - Keep test set separate for final evaluation
 - Perform splitting after cleaning and preprocessing to avoid data leakage
 
 
-### 5. Modeling
+### 6. Modeling
 - Train and evaluate models including:
   - Linear Regression
   - Decision Tree Regressor
@@ -36,7 +47,7 @@ This project implements a machine learning pipeline to predict taxi trip duratio
   - Neural Networks (simple MLP)
 - Monitor for overfitting and underfitting
 
-### 6. Hyperparameter Tuning
+### 7. Hyperparameter Tuning
 - Use GridSearchCV or RandomizedSearchCV with cross-validation 
 - Tune parameters for each model:
   - Decision Tree: max_depth, min_samples_split
@@ -44,7 +55,7 @@ This project implements a machine learning pipeline to predict taxi trip duratio
   - XGBoost: max_depth, gamma, scale_pos_weight,learning rate
   - Neural Networks: number of layers, neurons, learning rate, batch size
 
-### 7. Evaluation and Interpretation
+### 8. Evaluation and Interpretation
 - Evaluate models with metrics such as RMSE, MAE, and R²
 - Assess final model performance on test set
 
